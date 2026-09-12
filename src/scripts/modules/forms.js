@@ -4,8 +4,6 @@
 
 export const FORM_ENDPOINTS = {
     contact: "https://submit-form.com/RfTkwO9M8",
-    application: "https://submit-form.com/EHKBrbWCi",
-    prequalification: "https://submit-form.com/kZDQBYBSv"
 };
 
 
@@ -14,8 +12,6 @@ export const FORM_ENDPOINTS = {
 // ======================================================
 
 import { initContactForm } from "./contact-form.js";
-import { initApplicationForm } from "./application-form.js";
-import { initPrequalificationForm } from "./prequalification-form.js";
 
 
 // ======================================================
@@ -72,16 +68,6 @@ export function initPhoneInputs() {
 export function forms() {
     initContactForm(
         FORM_ENDPOINTS.contact,
-        submitForm
-    );
-
-    initApplicationForm(
-        FORM_ENDPOINTS.application,
-        submitForm
-    );
-
-    initPrequalificationForm(
-        FORM_ENDPOINTS.prequalification,
         submitForm
     );
 

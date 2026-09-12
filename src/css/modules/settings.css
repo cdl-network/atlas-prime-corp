@@ -1,10 +1,10 @@
 body {
-    font-family: var(--base-font);
+    font-family: Inter, sans-serif;
     line-height: 1.5;
 }
 
-.body-content h1, .body-content h2, .body-content h3, .body-content h4, .body-content h5, .body-content h6 {
-    font-family: var(--heading-font);
+.body-content h2, .body-content h3, .body-content h4, .body-content h5, .body-content h6 {
+    font-family: Barlow, sans-serif;
     line-height: 1.35;
 }
 

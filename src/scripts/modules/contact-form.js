@@ -1,11 +1,13 @@
 // ======================================================
-// Contact / Quote Form
+// Contact Form
 // ======================================================
 
 export function initContactForm(endpoint, submitForm) {
-    const form = document.querySelector("#contact-form");
+    const form = document.querySelector("#send-message-form");
 
     if (!form) return;
+
+    const thankYou = document.querySelector("#send-message-thank-you");
 
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -26,19 +28,17 @@ export function initContactForm(endpoint, submitForm) {
 
             form.reset();
 
-            button.innerHTML = "Sent Successfully";
+            form.classList.add("hidden");
 
-            setTimeout(() => {
-                button.innerHTML = originalText;
-                button.disabled = false;
-            }, 3000);
+            if (thankYou) {
+                thankYou.classList.remove("hidden");
+            }
 
         } catch (error) {
-
             button.innerHTML = "Try Again";
             button.disabled = false;
 
-            alert(error.message);
+            alert("Something went wrong. Please try again.");
         }
     });
 }
