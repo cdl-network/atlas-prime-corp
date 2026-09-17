@@ -3,7 +3,7 @@
 // ======================================================
 
 export const FORM_ENDPOINTS = {
-    contact: "https://submit-form.com/RfTkwO9M8",
+    contact: "https://submit-form.com/uBjVtLVqH",
 };
 
 
